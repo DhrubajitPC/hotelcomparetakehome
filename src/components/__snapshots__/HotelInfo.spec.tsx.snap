@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HotelInfo should render correctly 1`] = `
+<div>
+  <div
+    style="display: flex; justify-content: left;"
+  >
+    <div>
+      <img
+        alt="hotel"
+        src="photo url"
+      />
+    </div>
+    <div
+      style="margin-right: auto;"
+    >
+      <h3>
+        Shinagawa Prince Hotel
+      </h3>
+      <p>
+        some address
+      </p>
+      some mock description
+      <button>
+        Book!
+      </button>
+    </div>
+    <div>
+      <p>
+        4
+         star Hotel
+      </p>
+      <p>
+        Rating 
+        7.7
+      </p>
+      <p>
+        SGD
+         
+        100
+      </p>
+    </div>
+  </div>
+</div>
+`;

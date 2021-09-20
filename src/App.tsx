@@ -1,29 +1,49 @@
-import React from 'react';
+import React, { FC } from "react";
 import "./App.css";
-import logo from "./logo.svg";
-import AppContextProvider from "./state/Context";
+import HotelInfo from "./components/HotelInfo";
+import AppContextProvider, { useAppContext } from "./state/Context";
 
 function App() {
+  const currencies = ["USD", "SGD", "CNY", "KRW"];
   return (
     <AppContextProvider>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div
+        style={{
+          margin: "0 15px",
+        }}
+      >
+        <div>
+          Currency:{" "}
+          <select name="currency">
+            {currencies.map((c) => (
+              <option value={c}>{c}</option>
+            ))}
+          </select>
+        </div>
+        <HotelsList />
       </div>
     </AppContextProvider>
   );
 }
+
+const HotelsList: FC = () => {
+  const { state } = useAppContext();
+  return (
+    <div>
+      {!state.loading.hotel &&
+        state.hotels.map((h, i) => (
+          <HotelInfo
+            onBook={function (): void {
+              throw new Error("missing feature");
+            }}
+            currency={""}
+            key={i}
+            {...h}
+            price={212}
+          />
+        ))}
+    </div>
+  );
+};
 
 export default App;

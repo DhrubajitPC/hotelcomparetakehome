@@ -9,5 +9,9 @@ export const reducer: Reducer<State, { type: string; payload: any }> = (
   switch (action.type) {
     case A.REPLACE:
       return action.payload;
+    case A.FETCH_HOTELS_REQUEST:
+      draft.loading.hotel = false;
+      draft.hotels = action.payload;
+      return;
   }
 };

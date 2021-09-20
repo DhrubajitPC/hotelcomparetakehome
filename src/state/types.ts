@@ -15,8 +15,15 @@ export type Currency = {
   taxes_and_fees?: Record<string, number>;
 };
 
-export type State = Array<
-  Hotel & {
-    price: Record<string, Currency>;
-  }
->;
+export type State = {
+  hotels: Array<
+    Hotel & {
+      price?: Record<string, Currency>;
+    }
+  >;
+  selectedCurrency: "USD" | "SGD" | "CNY" | "KRW";
+  loading: {
+    hotel: boolean;
+    pricing: boolean;
+  };
+};
