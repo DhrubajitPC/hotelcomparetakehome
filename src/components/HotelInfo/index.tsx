@@ -1,5 +1,7 @@
 import React, { FC } from "react";
-import { Hotel } from "../state/types";
+import { Hotel } from "../../state/types";
+import TaxBreakdown from "../TaxBreakdown";
+import Tooltip from "../Tooltip";
 
 export type Props = {
   onBook: () => void;
@@ -14,9 +16,9 @@ const HotelInfo: FC<Props> = ({
   photo,
   rating,
   stars,
-  onBook,
   price,
   currency,
+  onBook,
   children,
 }) => (
   <>
@@ -42,9 +44,11 @@ const HotelInfo: FC<Props> = ({
       <div>
         <p>{stars} star Hotel</p>
         <p>Rating {rating}</p>
-        <p>
-          {currency} {price}
-        </p>
+        <Tooltip body={<TaxBreakdown tax={0} hotelFees={0} />}>
+          <p>
+            {currency} {price}
+          </p>
+        </Tooltip>
       </div>
     </div>
     {children && <div>{children}</div>}

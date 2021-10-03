@@ -20,7 +20,9 @@ exports[`HotelInfo should render correctly 1`] = `
       <p>
         some address
       </p>
-      some mock description
+      <div>
+        some mock description
+      </div>
       <button>
         Book!
       </button>
@@ -34,11 +36,16 @@ exports[`HotelInfo should render correctly 1`] = `
         Rating 
         7.7
       </p>
-      <p>
-        SGD
-         
-        100
-      </p>
+      <div
+        data-testid="tooltip-container"
+        style="position: relative;"
+      >
+        <p>
+          SGD
+           
+          100
+        </p>
+      </div>
     </div>
   </div>
 </div>

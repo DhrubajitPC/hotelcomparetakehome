@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import React from "react";
-import HotelInfo, { Props } from "./HotelInfo";
+import HotelInfo, { Props } from ".";
 
 describe("HotelInfo", () => {
   let props: Props;

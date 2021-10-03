@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders learn react link 1`] = `
+<div>
+  <div
+    style="margin: 0px 15px;"
+  >
+    <div>
+      Currency:
+       
+      <select
+        name="currency"
+      >
+        <option
+          value="USD"
+        >
+          USD
+        </option>
+        <option
+          value="SGD"
+        >
+          SGD
+        </option>
+        <option
+          value="CNY"
+        >
+          CNY
+        </option>
+        <option
+          value="KRW"
+        >
+          KRW
+        </option>
+      </select>
+    </div>
+  </div>
+</div>
+`;

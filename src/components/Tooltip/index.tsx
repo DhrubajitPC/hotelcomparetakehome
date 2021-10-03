@@ -1,7 +1,7 @@
-import React, { FC, useState } from "react";
+import React, { FC, ReactElement, useState } from "react";
 
 type Props = {
-  body: HTMLElement;
+  body: ReactElement;
 };
 
 const Tooltip: FC<Props> = ({ body, children }) => {
@@ -9,6 +9,7 @@ const Tooltip: FC<Props> = ({ body, children }) => {
 
   return (
     <div
+      data-testid="tooltip-container"
       onMouseEnter={() => setShowTooltip(true)}
       onMouseLeave={() => setShowTooltip(false)}
       style={{
@@ -20,7 +21,7 @@ const Tooltip: FC<Props> = ({ body, children }) => {
         <div
           style={{
             position: "absolute",
-            top: 0,
+            top: "20px",
             left: 0,
             background: "#dfe6e9",
             borderRadius: "5px",
