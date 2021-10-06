@@ -1,10 +1,8 @@
 import React, { FC, useContext, useEffect } from "react";
 import { useImmerReducer } from "use-immer";
-import { HOTELS_URL } from "../infra/urls";
+import { apiWrapper } from "../infra/api";
 import { reducer } from "./reducers";
 import { State } from "./types";
-import * as A from "./actions";
-import fetch from "../infra/api";
 
 type Context = {
   state: State;
@@ -17,7 +15,8 @@ type Context = {
 const initialState: Context = {
   state: {
     hotels: [],
-    loading: { hotel: true, pricing: false },
+    prices: { USD: [], CNY: [], KRW: [], SGD: [] },
+    loading: { hotels: "REQUEST", prices: "REQUEST" },
     selectedCurrency: "USD",
   },
   dispatch: () => {},
@@ -27,21 +26,20 @@ const AppContext = React.createContext<Context>(initialState);
 
 export const useAppContext = () => useContext(AppContext);
 
+export const useAPI = () => {
+  const {dispatch} = useContext(AppContext)
+  return apiWrapper(dispatch)
+}
+
 const AppContextProvider: FC = ({ children }) => {
   const [state, dispatch] = useImmerReducer(reducer, initialState.state);
+  const api = apiWrapper(dispatch)
 
-  // fetch initial list of hotels
+  // fetch initial list of hotels and usd currency
   useEffect(() => {
-    async function fetchInitData() {
-      try {
-        const data = await fetch<Context["state"]["hotels"]>(HOTELS_URL);
-        dispatch({
-          payload: data,
-          type: A.FETCH_HOTELS_REQUEST,
-        });
-      } catch (e) {
-        console.error("error trying to fetch hotels");
-      }
+    function fetchInitData() {
+      api.fetchHotels()
+      api.fetchPrices('USD')
     }
     fetchInitData();
   }, []);

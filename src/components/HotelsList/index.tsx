@@ -4,9 +4,10 @@ import HotelInfo from "../HotelInfo";
 
 const HotelsList: FC = () => {
   const { state } = useAppContext();
+  const loading = state.loading.hotels === "REQUEST";
   return (
     <>
-      {!state.loading.hotel &&
+      {!loading &&
         state.hotels.map((h, idx) => (
           <HotelInfo
             onBook={() => {}}

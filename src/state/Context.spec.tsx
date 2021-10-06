@@ -1,12 +1,12 @@
 import { render } from "@testing-library/react";
 import React, { FC } from "react";
 import AppContextProvider, { useAppContext } from "./Context";
-import { Currency, Hotel } from "./types";
+import { Price, Hotel } from "./types";
 import * as A from "./actions";
 
 describe("AppContextProvider", () => {
   let TestComponent: FC;
-  let mockData: Hotel & { price: Record<string, Currency> };
+  let mockData: Hotel & { price: Record<string, Price> };
 
   beforeAll(() => {
     mockData = {

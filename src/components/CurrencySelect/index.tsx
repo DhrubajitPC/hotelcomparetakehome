@@ -2,6 +2,7 @@ import React, { FC } from "react";
 
 const CurrencySelect: FC = () => {
   const currencies = ["USD", "SGD", "CNY", "KRW"];
+
   return (
     <div>
       Currency:{" "}
