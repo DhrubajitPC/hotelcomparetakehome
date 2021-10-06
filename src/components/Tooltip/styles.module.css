@@ -1,0 +1,14 @@
+:root {
+	--black: #535c68
+}
+
+.body {
+  position: absolute;
+  top: 30px;
+  left: -30px;
+	padding: 20px;
+	border: 1px solid var(--black);
+	width: 100px;
+	box-shadow: 0 4px 2px -2px var(--black);
+	border-radius: 5px;
+}

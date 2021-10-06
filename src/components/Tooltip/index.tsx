@@ -1,4 +1,5 @@
 import React, { FC, ReactElement, useState } from "react";
+import styles from "./styles.module.css";
 
 type Props = {
   body: ReactElement;
@@ -14,22 +15,11 @@ const Tooltip: FC<Props> = ({ body, children }) => {
       onMouseLeave={() => setShowTooltip(false)}
       style={{
         position: "relative",
+        cursor: "help",
       }}
     >
       {children}
-      {showTooltip && (
-        <div
-          style={{
-            position: "absolute",
-            top: "20px",
-            left: 0,
-            background: "#dfe6e9",
-            borderRadius: "5px",
-          }}
-        >
-          {body}
-        </div>
-      )}
+      {showTooltip && <div className={styles.body}>{body}</div>}
     </div>
   );
 };

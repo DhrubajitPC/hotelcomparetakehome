@@ -1,58 +1,45 @@
 import React, { FC } from "react";
 import { Hotel } from "../../state/types";
-import TaxBreakdown from "../TaxBreakdown";
-import Tooltip from "../Tooltip";
+import HotelPrice from "./HotelPrice";
+import styles from "./styles.module.css";
 
 export type Props = {
   onBook: () => void;
-  price: number;
-  currency: string;
-} & Omit<Hotel, "id">;
+} & Hotel;
 
 const HotelInfo: FC<Props> = ({
+  id,
   address,
   description,
   name,
   photo,
   rating,
   stars,
-  price,
-  currency,
   onBook,
   children,
-}) => (
-  <>
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "left",
-      }}
-    >
-      <div>
-        <img alt="hotel" src={photo} />
+}) => {
+  return (
+    <>
+      <div className={styles.container}>
+        <div className={styles.imageContainer}>
+          <img alt="hotel" src={photo} />
+        </div>
+        <div className={styles.body}>
+          <h3>{name}</h3>
+          <p>{address}</p>
+          <div dangerouslySetInnerHTML={{ __html: description }} />
+          <button onClick={onBook}>Book!</button>
+        </div>
+        <div className={styles.review}>
+          <h4>Review</h4>
+          <p>{stars} ⭐ Hotel</p>
+          <p>Rating: {rating}</p>
+          <HotelPrice hotelId={id} />
+        </div>
       </div>
-      <div
-        style={{
-          marginRight: "auto",
-        }}
-      >
-        <h3>{name}</h3>
-        <p>{address}</p>
-        <div dangerouslySetInnerHTML={{ __html: description }} />
-        <button onClick={onBook}>Book!</button>
-      </div>
-      <div>
-        <p>{stars} star Hotel</p>
-        <p>Rating {rating}</p>
-        <Tooltip body={<TaxBreakdown tax={0} hotelFees={0} />}>
-          <p>
-            {currency} {price}
-          </p>
-        </Tooltip>
-      </div>
-    </div>
-    {children && <div>{children}</div>}
-  </>
-);
+      {children && <div>{children}</div>}
+    </>
+  );
+};
 
 export default HotelInfo;

@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import CurrencySelect from "./components/CurrencySelect";
 import ErrorBoundary from "./components/ErrorBoundary";
 import HotelsList from "./components/HotelsList";
