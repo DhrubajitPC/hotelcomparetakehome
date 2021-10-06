@@ -24,7 +24,7 @@ export const reducer: Reducer<State, { type: string; payload: any }> = (
     case A.FETCH_PRICE_SUCCESS:
       draft.loading.prices = "SUCCESS";
       const { currency, data } = action.payload;
-      draft.prices[currency as Currency] = data;
+      draft.prices = data;
       draft.selectedCurrency = currency;
       return;
     case A.FETCH_PRICE_FAILURE:

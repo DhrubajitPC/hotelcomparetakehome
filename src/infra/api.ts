@@ -46,7 +46,7 @@ export const apiWrapper = (
             url = PRICE_USD_URL;
             break;
         }
-        const price_data = await fetchAdapter<State["prices"]["USD"]>(url);
+        const price_data = await fetchAdapter<State["prices"]>(url);
 
         dispatch({
           type: A.FETCH_PRICE_SUCCESS,

@@ -15,7 +15,7 @@ type Context = {
 const initialState: Context = {
   state: {
     hotels: [],
-    prices: { USD: [], CNY: [], KRW: [], SGD: [] },
+    prices: [],
     loading: { hotels: "REQUEST", prices: "REQUEST" },
     selectedCurrency: "USD",
   },
