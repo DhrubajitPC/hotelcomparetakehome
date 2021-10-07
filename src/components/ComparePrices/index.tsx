@@ -6,7 +6,6 @@ type Props = {
 };
 
 
-
 const ComparePrices: FC<Props> = ({ hotelId }) => {
   const comparisons = useComparisons(hotelId);
   return comparisons.length > 0 ? (

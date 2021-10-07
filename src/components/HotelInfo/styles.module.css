@@ -10,9 +10,7 @@
 }
 
 .imageContainer {
-	display: flex;
-	align-items: center;
-	margin-right: 30px;
+	padding-top: 20px;
 }
 .imageContainer > img{
 	width: 300px;
@@ -25,5 +23,6 @@
 }
 
 .review {
-	min-width: 100px;
+	min-width: 150px;
 }
+

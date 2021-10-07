@@ -37,7 +37,6 @@ const HotelInfo: FC<Hotel> = ({
           <HotelPrice hotelId={id} />
         </div>
       </div>
-      {/* {children && <div>{children}</div>} */}
     </>
   );
 };
