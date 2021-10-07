@@ -1,4 +1,6 @@
+import * as A from "../state/actions";
 import { Currency, Price, State } from "../state/types";
+import { browserStore } from "./browserStore";
 import {
   HOTELS_URL,
   PRICE_CNY_URL,
@@ -6,7 +8,6 @@ import {
   PRICE_SGD_URL,
   PRICE_USD_URL,
 } from "./urls";
-import * as A from "../state/actions";
 
 function fetchAdapter<T>(url: string): Promise<T> {
   return fetch(url).then((response) => {
@@ -55,6 +56,8 @@ export const apiWrapper = (
             data: Price[];
           },
         });
+
+        browserStore.setItem("currency", currency);
       } catch (e) {
         dispatch({
           type: A.FETCH_PRICE_FAILURE,
