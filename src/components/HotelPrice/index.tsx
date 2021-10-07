@@ -1,13 +1,14 @@
 import { FC } from "react";
 import { useAppContext } from "../../state/Context";
+import { formatPrice } from "../../utils";
 import TaxBreakdown from "../TaxBreakdown";
 import Tooltip from "../Tooltip";
 import { usePriceBreakdown } from "./hooks";
-import { formatPrice } from "./utils";
 
 const HotelPrice: FC<{ hotelId: number }> = ({ hotelId }) => {
-  const { state } = useAppContext();
-  const currency = state.selectedCurrency;
+  const {
+    state: { selectedCurrency: currency },
+  } = useAppContext();
   const priceBreakdown = usePriceBreakdown(hotelId);
 
   const isTaxInclusive = Boolean(priceBreakdown.hotelFees);
@@ -29,14 +30,18 @@ const HotelPrice: FC<{ hotelId: number }> = ({ hotelId }) => {
         />
       }
     >
+      <button onClick={() => {}}>Book!</button>
       <p style={{ textDecoration: "underline" }}>
         {showCurrency && currency} {price}*
       </p>
     </Tooltip>
   ) : (
-    <p>
-      {showCurrency && currency} {price}
-    </p>
+    <>
+      <button onClick={() => {}}>Book!</button>
+      <p>
+        {showCurrency && currency} {price}
+      </p>
+    </>
   );
 };
 

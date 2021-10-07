@@ -1,4 +1,4 @@
-import { Currency } from "../../state/types";
+import { Currency } from "../state/types";
 
 export const formatPrice = (currency: Currency, value: number) => {
   switch (currency) {

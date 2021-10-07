@@ -11,7 +11,7 @@ export type Hotel = {
 export type Price = {
   id: number;
   price: number;
-  competors?: Record<string, number>;
+  competitors?: Record<string, number>;
   taxes_and_fees?: {
     tax: number;
     hotel_fees: number;
