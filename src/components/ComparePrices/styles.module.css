@@ -1,0 +1,27 @@
+.container {
+	display: flex;
+	flex-direction: column;
+}
+
+.comparisonItem {
+	display: flex;
+	justify-content: space-between;
+	box-shadow: 0 1px 2px -2px var(--black);
+}
+
+.comparisonItem:last-child{
+	box-shadow: none;
+}
+
+.strikeThrough {
+	position: relative;
+}
+.strikeThrough::before {
+	position: absolute;
+	content: '';
+	border: 1px solid var(--red);
+	transform: rotate(-5deg);
+	top:50%;
+	left:0;
+	right:0;
+}

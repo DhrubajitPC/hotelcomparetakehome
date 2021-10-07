@@ -1,5 +1,7 @@
 :root {
-	--black: #535c68
+	--black: #535c68;
+  --red: #eb4d4b;
+  --white: #fff;
 }
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

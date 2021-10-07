@@ -1,32 +1,21 @@
 import React, { FC } from "react";
 import { useComparisons } from "../../hooks";
+import styles from "./styles.module.css";
 
 type Props = {
   hotelId: number;
 };
 
-
 const ComparePrices: FC<Props> = ({ hotelId }) => {
   const comparisons = useComparisons(hotelId);
   return comparisons.length > 0 ? (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
+    <div className={styles.container}>
       <h4>The Competition</h4>
-      {comparisons.map((c) => {
+      {comparisons.map((c, idx) => {
         return (
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-            }}
-          >
+          <div key={c.name} className={styles.comparisonItem}>
             <p>{c.name}</p>
-            <p>
+            <p className={c.name !== "Us" && idx === comparisons.length - 1? styles.strikeThrough : ""}>
               {c.currency} {c.price}
             </p>
           </div>
