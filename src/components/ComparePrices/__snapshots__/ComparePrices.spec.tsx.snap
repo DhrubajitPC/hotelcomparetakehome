@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#ComparePrices should render correctly 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <h4>
+      The Competition
+    </h4>
+    <div
+      class="comparisonItem"
+    >
+      <p>
+        expedia
+      </p>
+      <p
+        class=""
+      >
+        USD
+         
+        100
+      </p>
+    </div>
+    <div
+      class="comparisonItem"
+    >
+      <p>
+        Us
+      </p>
+      <p
+        class=""
+      >
+        USD
+         
+        110
+      </p>
+    </div>
+    <div
+      class="comparisonItem"
+    >
+      <p>
+        airbnb
+      </p>
+      <p
+        class="strikeThrough"
+      >
+        USD
+         
+        120
+      </p>
+    </div>
+  </div>
+</div>
+`;

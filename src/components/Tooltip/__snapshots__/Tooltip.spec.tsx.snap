@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HotelInfo should render correctly 1`] = `
+exports[`#Tooltip should render correctly 1`] = `
 <div>
   <div
     data-testid="tooltip-container"
-    style="position: relative;"
+    style="position: relative; cursor: help;"
   />
 </div>
 `;

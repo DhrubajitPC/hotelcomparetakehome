@@ -3,49 +3,59 @@
 exports[`HotelInfo should render correctly 1`] = `
 <div>
   <div
-    style="display: flex; justify-content: left;"
+    class="container"
   >
-    <div>
+    <div
+      class="imageContainer"
+    >
       <img
         alt="hotel"
         src="photo url"
       />
     </div>
     <div
-      style="margin-right: auto;"
+      class="body"
     >
       <h3>
         Shinagawa Prince Hotel
       </h3>
       <p>
+        <em>
+          Address:
+        </em>
+         
         some address
       </p>
       <div>
         some mock description
       </div>
-      <button>
-        Book!
-      </button>
     </div>
-    <div>
+    <div
+      class="review"
+    >
+      <h4>
+        Review
+      </h4>
       <p>
         4
-         star Hotel
+         ⭐ Hotel
       </p>
       <p>
-        Rating 
+        Rating: 
         7.7
       </p>
-      <div
-        data-testid="tooltip-container"
-        style="position: relative;"
+      <p
+        style="color: rgb(235, 77, 75);"
       >
-        <p>
-          SGD
-           
-          100
-        </p>
-      </div>
+        Price: 
+         
+        Rates Unavailable
+      </p>
+      <button
+        style="padding: 20px; background: rgb(72, 52, 212); border-radius: 10px; font-size: 18px; color: rgb(255, 255, 255); cursor: pointer;"
+      >
+        Book!
+      </button>
     </div>
   </div>
 </div>

@@ -8,7 +8,15 @@ const HotelsList: FC = () => {
   const hotels = orderHotelsbyPriceAvailability(state.hotels, state.prices);
   const loading = state.loading.hotels === "REQUEST";
 
-  return <>{!loading && hotels.map((h) => <HotelInfo {...h} key={h.id} />)}</>;
+  return (
+    <>
+      {loading ? (
+        <h4>Please wait while we load the data...</h4>
+      ) : (
+        hotels.map((h) => <HotelInfo {...h} key={h.id} />)
+      )}
+    </>
+  );
 };
 
 export default HotelsList;

@@ -9,16 +9,17 @@ exports[`CurrencySelect should render correctly 1`] = `
       name="currency"
     >
       <option
-        value="USD"
-      >
-        USD
-      </option>
-      <option
         value="SGD"
       >
         SGD
       </option>
       <option
+        value="USD"
+      >
+        USD
+      </option>
+      <option
+        selected=""
         value="CNY"
       >
         CNY

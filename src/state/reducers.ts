@@ -1,6 +1,6 @@
 import { Reducer } from "react";
 import * as A from "./actions";
-import { Currency, State } from "./types";
+import { State } from "./types";
 
 export const reducer: Reducer<State, { type: string; payload: any }> = (
   draft,

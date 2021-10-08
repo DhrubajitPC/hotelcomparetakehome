@@ -19,8 +19,8 @@ const initialState: Context = {
   state: {
     hotels: [],
     prices: [],
-    loading: { hotels: "REQUEST", prices: "REQUEST" },
-    selectedCurrency: initialCurrency
+    loading: { hotels: "SUCCESS", prices: "SUCCESS" },
+    selectedCurrency: initialCurrency,
   },
   dispatch: () => {},
 };

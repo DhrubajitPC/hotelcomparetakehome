@@ -9,14 +9,15 @@ exports[`renders learn react link 1`] = `
       name="currency"
     >
       <option
-        value="USD"
-      >
-        USD
-      </option>
-      <option
         value="SGD"
       >
         SGD
+      </option>
+      <option
+        selected=""
+        value="USD"
+      >
+        USD
       </option>
       <option
         value="CNY"
@@ -30,5 +31,8 @@ exports[`renders learn react link 1`] = `
       </option>
     </select>
   </div>
+  <h4>
+    Please wait while we load the data...
+  </h4>
 </div>
 `;

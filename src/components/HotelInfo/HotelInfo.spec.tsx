@@ -1,20 +1,19 @@
 import { render } from "@testing-library/react";
 import React from "react";
-import HotelInfo, { Props } from ".";
+import HotelInfo from ".";
+import { Hotel } from "../../state/types";
 
 describe("HotelInfo", () => {
-  let props: Props;
+  let props: Hotel;
   beforeAll(() => {
     props = {
+      id: 1,
       address: "some address",
       name: "Shinagawa Prince Hotel",
       rating: 7.7,
       stars: 4,
       photo: "photo url",
       description: "some mock description",
-      price: 100,
-      currency: "SGD",
-      onBook: () => {},
     };
   });
   it("should render correctly", () => {

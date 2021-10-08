@@ -1,24 +1,14 @@
 import { render } from "@testing-library/react";
 import React, { FC } from "react";
-import AppContextProvider, { useAppContext } from "./Context";
-import { Price, Hotel } from "./types";
 import * as A from "./actions";
+import AppContextProvider, { useAppContext } from "./Context";
 
 describe("AppContextProvider", () => {
   let TestComponent: FC;
-  let mockData: Hotel & { price: Record<string, Price> };
+  let mockData: string;
 
   beforeAll(() => {
-    mockData = {
-      id: 1,
-      name: "Shinagawa Prince Hotel",
-      rating: 7.7,
-      stars: 4,
-      address: "some address",
-      photo: "photo url",
-      description: "some mock description",
-      price: {},
-    };
+    mockData = "some mock string";
     TestComponent = () => {
       const { state, dispatch } = useAppContext();
 
@@ -49,6 +39,6 @@ describe("AppContextProvider", () => {
     );
 
     getByTestId("btn").click();
-    expect(getByTestId("content")).toHaveTextContent(/some mock description/);
+    expect(getByTestId("content")).toHaveTextContent(/some mock string/);
   });
 });

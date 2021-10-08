@@ -3,49 +3,122 @@
 exports[`HotelInfo should render correctly 1`] = `
 <div>
   <div
-    style="display: flex; justify-content: left;"
+    class="container"
   >
-    <div>
+    <div
+      class="imageContainer"
+    >
       <img
         alt="hotel"
         src="image url"
       />
     </div>
     <div
-      style="margin-right: auto;"
+      class="body"
     >
       <h3>
         mock hotel name
       </h3>
       <p>
+        <em>
+          Address:
+        </em>
+         
         mock address
       </p>
       <div>
         mock description
       </div>
-      <button>
-        Book!
-      </button>
+      <hr />
+      <div
+        class="container"
+      >
+        <h4>
+          The Competition
+        </h4>
+        <div
+          class="comparisonItem"
+        >
+          <p>
+            Expedia
+          </p>
+          <p
+            class=""
+          >
+            USD
+             
+            163
+          </p>
+        </div>
+        <div
+          class="comparisonItem"
+        >
+          <p>
+            Us
+          </p>
+          <p
+            class=""
+          >
+            USD
+             
+            164
+          </p>
+        </div>
+        <div
+          class="comparisonItem"
+        >
+          <p>
+            Traveloka
+          </p>
+          <p
+            class="strikeThrough"
+          >
+            USD
+             
+            190
+          </p>
+        </div>
+      </div>
     </div>
-    <div>
+    <div
+      class="review"
+    >
+      <h4>
+        Review
+      </h4>
       <p>
         4
-         star Hotel
+         ⭐ Hotel
       </p>
       <p>
-        Rating 
+        Rating: 
         3
       </p>
       <div
         data-testid="tooltip-container"
-        style="position: relative;"
+        style="position: relative; cursor: help;"
       >
-        <p>
-          
+        <p
+          style="text-decoration: underline; color: rgb(235, 77, 75);"
+        >
+          USD
            
-          212
+          164
+          *
         </p>
       </div>
+      <p
+        style="text-transform: uppercase; font-size: 14px;"
+      >
+        you save 
+        13.68
+        %
+      </p>
+      <button
+        style="padding: 20px; background: rgb(72, 52, 212); border-radius: 10px; font-size: 18px; color: rgb(255, 255, 255); cursor: pointer;"
+      >
+        Book!
+      </button>
     </div>
   </div>
 </div>

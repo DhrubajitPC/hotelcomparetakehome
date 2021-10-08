@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#HotelPrice should render hotelPrice component correctly when there is a breakdown 1`] = `
+<div>
+  <div
+    data-testid="tooltip-container"
+    style="position: relative; cursor: help;"
+  >
+    <p
+      style="text-decoration: underline; color: rgb(235, 77, 75);"
+    >
+      SGD
+       
+      120
+      *
+    </p>
+    <div
+      class="body"
+    >
+      <p>
+        Tax: 
+        11.11
+      </p>
+      <p>
+        Hotel Fees: 
+        22
+      </p>
+    </div>
+  </div>
+  <p
+    style="text-transform: uppercase; font-size: 14px;"
+  >
+    you save 
+    10.00
+    %
+  </p>
+  <button
+    style="padding: 20px; background: rgb(72, 52, 212); border-radius: 10px; font-size: 18px; color: rgb(255, 255, 255); cursor: pointer;"
+  >
+    Book!
+  </button>
+</div>
+`;
+
+exports[`#HotelPrice should render hotelPrice component correctly when there is no breakdown 1`] = `
+<div>
+  <p
+    style="color: rgb(235, 77, 75);"
+  >
+    Price: 
+    SGD
+     
+    120
+  </p>
+  <p
+    style="text-transform: uppercase; font-size: 14px;"
+  >
+    you save 
+    10.00
+    %
+  </p>
+  <button
+    style="padding: 20px; background: rgb(72, 52, 212); border-radius: 10px; font-size: 18px; color: rgb(255, 255, 255); cursor: pointer;"
+  >
+    Book!
+  </button>
+</div>
+`;
+
+exports[`#HotelPrice should render hotelPrice component correctly when there is no price 1`] = `
+<div>
+  <p
+    style="color: rgb(235, 77, 75);"
+  >
+    Price: 
+     
+    Rates Unavailable
+  </p>
+  <p
+    style="text-transform: uppercase; font-size: 14px;"
+  >
+    you save 
+    10.00
+    %
+  </p>
+  <button
+    style="padding: 20px; background: rgb(72, 52, 212); border-radius: 10px; font-size: 18px; color: rgb(255, 255, 255); cursor: pointer;"
+  >
+    Book!
+  </button>
+</div>
+`;

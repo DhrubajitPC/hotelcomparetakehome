@@ -56,6 +56,7 @@ const HotelPrice: FC<{ hotelId: number }> = ({ hotelId }) => {
           borderRadius: "10px",
           fontSize: "18px",
           color: "#fff",
+          cursor: "pointer",
         }}
         onClick={() => {}}
       >

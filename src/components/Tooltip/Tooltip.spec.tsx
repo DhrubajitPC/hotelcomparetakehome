@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import Tooltip from ".";
 import React, { FC } from "react";
 
-describe("HotelInfo", () => {
+describe("#Tooltip", () => {
   let BodyComponent: FC;
   beforeAll(() => {
     BodyComponent = () => <p>Mock para</p>;
@@ -19,5 +19,7 @@ describe("HotelInfo", () => {
     expect(screen.queryByText(/Mock para/i)).toBeNull();
     fireEvent.mouseEnter(element);
     expect(screen.getByText(/Mock para/i)).toBeInTheDocument();
+    fireEvent.mouseLeave(element);
+    expect(screen.getByText(/Mock para/i)).not.toBeInTheDocument();
   });
 });
