@@ -40,7 +40,7 @@ jest.mock("../../state/context.tsx", () => ({
   }),
 }));
 
-describe("HotelInfo", () => {
+describe("#HotelList", () => {
   it("should render correctly", () => {
     const { container } = render(<HotelsList />);
     expect(container).toMatchSnapshot();

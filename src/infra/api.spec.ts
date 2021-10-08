@@ -10,7 +10,7 @@ import {
   PRICE_USD_URL,
 } from "./urls";
 
-describe("#API", () => {
+describe("#Api", () => {
   let fetchMock: jest.SpyInstance;
   let api: {
     fetchPrices: (currency: Currency) => void;

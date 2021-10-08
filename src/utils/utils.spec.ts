@@ -1,5 +1,5 @@
 import { formatPrice } from ".";
-describe("Utils", () => {
+describe("#Utils", () => {
   it("Should format price for currencies like USD, SGD, CNY by rounding to their nearest dollar", () => {
     const sgd = formatPrice("SGD", 1000012.1251);
     const usd = formatPrice("SGD", 1000012.1251);

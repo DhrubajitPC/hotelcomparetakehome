@@ -47,7 +47,7 @@ jest
     }),
   }));
 
-describe("#HOOKS", () => {
+describe("#HotelPrice Hooks", () => {
   it("usePriceBreakdown - should return the price breakdown correctly when price and taxes are present", () => {
     let breakdown = usePriceBreakdown(2);
     expect(breakdown).toMatchObject({

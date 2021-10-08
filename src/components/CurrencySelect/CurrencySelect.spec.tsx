@@ -15,7 +15,7 @@ jest.mock("../../state/Context", () => ({
   }),
 }));
 
-describe("CurrencySelect", () => {
+describe("#CurrencySelect", () => {
   it("should render correctly", () => {
     const { container } = render(<CurrencySelect />);
     expect(container).toMatchSnapshot();

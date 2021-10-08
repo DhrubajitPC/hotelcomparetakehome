@@ -3,7 +3,7 @@ import React from "react";
 import HotelInfo from ".";
 import { Hotel } from "../../state/types";
 
-describe("HotelInfo", () => {
+describe("#HotelInfo", () => {
   let props: Hotel;
   beforeAll(() => {
     props = {

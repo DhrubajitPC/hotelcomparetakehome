@@ -2,7 +2,7 @@ import Actions from "./actions";
 import { reducer } from "./reducers";
 import { State } from "./types";
 
-describe("#REDUCERS", () => {
+describe("#Reducers", () => {
   let initialState: State;
 
   beforeEach(() => {

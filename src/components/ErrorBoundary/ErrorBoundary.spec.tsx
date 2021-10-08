@@ -5,7 +5,7 @@ import ErrorBoundary from ".";
 // suppress error for this file
 jest.spyOn(console, "error").mockImplementation(() => jest.fn());
 
-describe("ErrorBoundary", () => {
+describe("#ErrorBoundary", () => {
   let BuggyComponent: FC<{ flag: boolean }>;
   const { location } = window;
 
