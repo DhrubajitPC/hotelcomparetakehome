@@ -20,6 +20,6 @@ describe("#Tooltip", () => {
     fireEvent.mouseEnter(element);
     expect(screen.getByText(/Mock para/i)).toBeInTheDocument();
     fireEvent.mouseLeave(element);
-    expect(screen.getByText(/Mock para/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/Mock para/i)).toBeNull();
   });
 });
